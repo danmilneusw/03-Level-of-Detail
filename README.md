@@ -140,7 +140,7 @@ More recently, software progress has enabled us to implement near-photorealistic
 3. Complete the **03 - Profiling the Build and GPU Usage** tutorial. You will see how your DLOD implementation affected GPU usage and learn to profile your build for more accurate performance analysis.
 4. Aside from using DLOD, developing a new LOD optimisation system for your assignment will help you gain marks. Think of some new ways to implement LOD that could work for your own project. Come up with your own too, but here's some ideas:
 - Detect the speed of an object. If it is moving so fast it is difficult to make out the details of it, then why not implement LOD Groups with lower texture versions that change based on speed?
-- We've covered LOD for meshes. What else could be compressed if far from the camera? What about textures? Can you write a script that dynamically compresses them from float to integer? Here is some [info on Unity Texture Formats](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html).
+- We've covered LOD for meshes. What else could be compressed if far from the camera? What about textures? Can you write a script that dynamically compresses them from float to integer? Here is some [info on Unity Texture Formats](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) and here is some [info on Texture Import Settings](https://docs.unity3d.com/Manual/class-TextureImporter.html.)
 
 
 ## Extra Resources
