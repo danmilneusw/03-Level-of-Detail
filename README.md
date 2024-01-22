@@ -1,10 +1,10 @@
 # 03-Level-of-Detail
 ## Introduction
-Level of detail, or LOD, typically refers to the complexity of a 3D model in our scene, often measured by the number of vertices. Meshes with a high level of detail and a high polygon/face count look great up close but when further away having a high performance can hinder performance when we don't need so much detail. But it can be used more generally too; it is any optimisation that dynamically alters the detail of something.
+Level of detail, or LOD, typically refers to the complexity of a 3D model in our scene. Meshes with a high level of detail and a high polygon/face count look great up close, but can needlessly hinder performance when we don't need so much detail. The term LOD can be used more generally too; it is any optimisation that dynamically alters the detail of something.
 
 One example of LOD is Nanite, a geometry optimiser, which was introduced in Unreal Engine 5. Nanite works by breaking down meshes into clusters of triangles. Based on factors, like distance from the camera and visibility, LOD is applied dynamically so that only the approriate sections of the mesh are loaded to give the perception to the end-user that the maximum level of detail is being rendered. All this processing is kept on the GPU too, so it is very efficient as no information needs to be passed between the CPU and GPU.
 
-Nanite is quite complex. You can learn more about it in your own time in the video linked below. Today, we'll focus on some of the most commonly LOD optimisation techniques in the game development industry.
+Nanite is quite complex. You can learn more about it in your own time in the video linked below. Today, we'll focus on some of the most common LOD optimisation techniques in the game development industry.
 
 [Nanite in UE5: The End of Polycounts? | Unreal Engine](https://youtu.be/xUUSsXswyZM?si=crGMuugWq1hhWah3)
 
@@ -12,6 +12,7 @@ Nanite is quite complex. You can learn more about it in your own time in the vid
 - Learn some examples of LOD
 - Implement LOD inside Unity
 - Learn to use the Unity Memory Profiler
+- Learn to profile a build and monitor GPU usage
 
 ## Discrete Level of Detail (DLOD)
 Discrete Level of Detail, or DLOD, is an optimisation technique where various models are created to represent the same object. The highest quality model is typically created first, then variations of lower and lower quality copies are created. Code is implemented to change the model in use based on factors defined by the developer, such as distance from the camera.
@@ -27,7 +28,7 @@ Discrete Level of Detail, or DLOD, is an optimisation technique where various mo
   </a>
 </div>
 
-Take the spheres in the image above, for closeups of the sphere, a higher quality sphere is used and for viewing the object far away, less detail is used. Because the lower quality spheres contain fewer vertices and therefore require less memory, we have more freedom with what we can render to the end-user, like render lots of objects or save memory on low-spec hardware. This technique works well for a range of objects:
+Take the spheres in the image above, for closeups of the sphere, a higher quality sphere is used and for viewing the object far away, less detail is used. Because the lower quality spheres contain fewer vertices and therefore require less time spent being rendered, we have more freedom with what else we can render to the end-user, like render lots of objects or save processing on low-spec hardware. This technique works well for a range of objects:
 
 <div align="center">
   <a href="Images\Rabbits.gif" target="_blank">
@@ -41,7 +42,7 @@ Take the spheres in the image above, for closeups of the sphere, a higher qualit
 </div>
 <br>
 
-Spyro the Dragon was one of the first games to implement DLOD, albeit more rudimentary. They used a simple method where close objects were rendered as they normally would be but far away objects were identical but were textureless. <a href="https://web.archive.org/web/20181024024756/https://www.gamestm.co.uk/features/holiday-gift-guide-the-best-of-the-vault-2016/">source</a>
+Spyro the Dragon was one of the first games to implement DLOD, albeit more rudimentary. They used a simple method where close objects were rendered as they normally would be but far away objects were identical but were textureless. <a href="https://web.archive.org/web/20181024024756/https://www.gamestm.co.uk/features/holiday-gift-guide-the-best-of-the-vault-2016/">You can learn more about the development of Spyro in this archived interview</a>.
 
 
 ## Distance Fog
@@ -91,7 +92,7 @@ Silent Hill 2 without Fog
 </div>
 <br>
 
-Fog continued to be used in later video games where culling objects completely wasn't mandotory for complex scenes. In these examples, fog is used to hide how models of a low level of detail have been used. This is why fog is common in open-world games.
+Fog continued to be used in later video games where culling objects completely wasn't mandatory for complex scenes. In these examples, fog is used to hide how models of a low level of detail have been used. This is why fog is common in open-world games.
 
 <div align="center">
   <a href="Images\GTA IV Screenshot.png" target="_blank">
@@ -135,10 +136,10 @@ More recently, software progress has enabled us to implement near-photorealistic
 <br>
 
 ## Tutorial
-1. Complete the **01 - Discrete LOD Tutorial**. You will learn to make your own discrete LOD system in Unity and learn some Blender too.
+1. Complete the **01 - Discrete LOD Tutorial**. You will learn to make your own discrete DLOD system in Unity and learn some Blender too.
 2. Complete the **02 - The Memory Profiler** tutorial. You will see how your DLOD implementation affected RAM...
 3. Complete the **03 - Profiling the Build and GPU Usage** tutorial. You will see how your DLOD implementation affected GPU usage and learn to profile your build for more accurate performance analysis.
-4. Aside from using DLOD, developing a new LOD optimisation system for your assignment will help you gain marks. Think of some new ways to implement LOD that could work for your own project. Come up with your own too, but here's some ideas:
+4. Aside from using DLOD discussed today, developing a new LOD optimisation system for your assignment will help you gain marks. Think of some new ways to implement LOD that could work for your own project. Here's some ideas if you're stuck:
 - Detect the speed of an object. If it is moving so fast it is difficult to make out the details of it, then why not implement LOD Groups with lower texture versions that change based on speed?
 - We've covered LOD for meshes. What else could be compressed if far from the camera? What about textures? Can you write a script that dynamically compresses them from float to integer? Here is some [info on Unity Texture Formats](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) and here is some [info on Texture Import Settings](https://docs.unity3d.com/Manual/class-TextureImporter.html.)
 
