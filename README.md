@@ -1,8 +1,8 @@
 # 03-Level-of-Detail
 ## Introduction
-Level of detail, or LOD, typically refers to the complexity of a 3D model in our scene, often measured by the number of vertices. But it can be used more generally too; it is any optimisation that dynamically alters the detail of something.
+Level of detail, or LOD, typically refers to the complexity of a 3D model in our scene, often measured by the number of vertices. Meshes with a high level of detail and a high polygon/face count look great up close but when further away having a high performance can hinder performance when we don't need so much detail. But it can be used more generally too; it is any optimisation that dynamically alters the detail of something.
 
-One example of LOD is Nanite,a geometry optimiser, which was introduced in Unreal Engine 5. Nanite works by breaking down meshes into clusters of triangles. Based on factors like distance from the camera and visibility, LOD is applied dynamically so that only the approriate sections of the mesh are loaded to give the perception to the end-user that the maximum level of detail is being rendered. All this processing is kept on the GPU too, so it is very efficient as no information needs to be passed between the CPU and GPU.
+One example of LOD is Nanite, a geometry optimiser, which was introduced in Unreal Engine 5. Nanite works by breaking down meshes into clusters of triangles. Based on factors, like distance from the camera and visibility, LOD is applied dynamically so that only the approriate sections of the mesh are loaded to give the perception to the end-user that the maximum level of detail is being rendered. All this processing is kept on the GPU too, so it is very efficient as no information needs to be passed between the CPU and GPU.
 
 Nanite is quite complex. You can learn more about it in your own time in the video linked below. Today, we'll focus on some of the most commonly LOD optimisation techniques in the game development industry.
 
@@ -150,5 +150,12 @@ More recently, software progress has enabled us to implement near-photorealistic
 - [Distance Fog Wikipedia Page](https://en.wikipedia.org/wiki/Distance_fog)
 
 ### LOD
+- [Level of Detail (LOD) for meshes](https://docs.unity3d.com/Manual/LevelOfDetail.html#:~:text=The%20LOD%20technique%20allows%20Unity,meshes%20are%20called%20LOD%20levels.)
 - [Unity - Working with LODs Tutorial](https://learn.unity.com/tutorial/working-with-lods-2019-3#)
 - [Full Monkey LOD Tutorial (Using Out of Data Blender)](https://www.youtube.com/watch?v=ifNyVS2_6f8)
+- [A drop-in dynamic resolution script (by Unity)](https://github.com/Unity-Technologies/DynamicResolutionSample)
+
+### Unity Memory Profiler
+- [Everything you need to know about Memory Profiler 1.0.0](https://blog.unity.com/engine-platform/everything-you-need-to-know-about-memory-profiler)
+
+- [USING MEMORY PROFILING TOOLS IN UNITY TO ANALYZE MEMORY USAGE](https://unity.com/how-to/analyze-memory-usage-memory-profiling-tools#:~:text=The%20Memory%20Profiler%20package%3A%20This,compare%20usage%20between%20multiple%20snapshots.)
