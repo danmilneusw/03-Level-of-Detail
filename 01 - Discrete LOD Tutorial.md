@@ -109,7 +109,7 @@ Then select Add Modifier > Subdivision Surface.
 </div>
 <br><br>
 
-10. Make sure you select the eye icon to hide Suzanne_LOD0. Now we can reduce the quality of this mesh. Originally, Face Count was 125,952. Select Suzanne_LOD1 and djust the settings how you wish for LOD1. I used a Levels Viewport of 3 and Decimate Ratio of 0.35 to reduce the Face Count to 15,921.
+10. Make sure you select the eye icon to hide Suzanne_LOD0. Now we can reduce the quality of this mesh. Originally, Face Count for my mesh was 125,952. Select Suzanne_LOD1 and adjust the settings how you wish for LOD1. I used a Levels Viewport of 3 and Decimate Ratio of 0.35 to reduce the Face Count to 15,921.
 
 <div align="center">
   <a href="Images\01 - Discrete LOD Tutorial\2 - LOD1 Detailing.png" target="_blank">
