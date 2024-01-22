@@ -150,6 +150,7 @@ More recently, software progress has enabled us to implement near-photorealistic
 - [Distance Fog Wikipedia Page](https://en.wikipedia.org/wiki/Distance_fog)
 
 ### LOD
+- [Unity Docs - Memory Profiler](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@1.1/manual/index.html)⭐
 - [Level of Detail (LOD) for meshes](https://docs.unity3d.com/Manual/LevelOfDetail.html#:~:text=The%20LOD%20technique%20allows%20Unity,meshes%20are%20called%20LOD%20levels.)
 - [Unity - Working with LODs Tutorial](https://learn.unity.com/tutorial/working-with-lods-2019-3#)
 - [Full Monkey LOD Tutorial (Using Out of Data Blender)](https://www.youtube.com/watch?v=ifNyVS2_6f8)
