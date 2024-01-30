@@ -149,6 +149,7 @@ More recently, software progress has enabled us to implement near-photorealistic
 
 ### Distance Fog
 - [Distance Fog Wikipedia Page](https://en.wikipedia.org/wiki/Distance_fog)
+- [Acerola Fog YouTube Video](https://www.youtube.com/watch?v=EFt_lLVDeRo&pp=ygULYWNlcm9sYSBmb2c%3D) ⭐
 
 ### LOD
 - [Unity Docs - Memory Profiler](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@1.1/manual/index.html) ⭐
