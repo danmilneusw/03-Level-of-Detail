@@ -1,4 +1,10 @@
 # 03-Level-of-Detail
+<div align="center">
+  <a href="Images\01 - Discrete LOD Tutorial\2 - LOD3 Detailing.png" target="_blank">
+    <img src="Images\01 - Discrete LOD Tutorial\2 - LOD3 Detailing.png" alt="LOD3 Detailing" style="height:300px;"/>
+  </a>
+</div>
+
 ## Introduction
 Level of detail, or LOD, typically refers to the complexity of a 3D model in our scene. Meshes with a high level of detail and a high polygon/face count look great up close, but can needlessly hinder performance when we don't need so much detail. The term LOD can be used more generally too; it is any optimisation that dynamically alters the detail of something.
 
